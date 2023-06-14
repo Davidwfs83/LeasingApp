@@ -105,7 +105,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TesterPlugin.cs" />
+    <Compile Include="Actions\AddIncidentFromExternal.cs" />
+    <Compile Include="OnCloseOppo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

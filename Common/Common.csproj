@@ -83,9 +83,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Account.cs" />
     <Compile Include="Entities\CrmServiceContext.cs" />
-    <Compile Include="Entities\new_Manufacturer.cs" />
-    <Compile Include="Entities\new_Model.cs" />
+    <Compile Include="Entities\dvd_car.cs" />
+    <Compile Include="Entities\dvd_cardriver.cs" />
+    <Compile Include="Entities\dvd_countries.cs" />
+    <Compile Include="Entities\dvd_manu.cs" />
+    <Compile Include="Entities\dvd_mod.cs" />
+    <Compile Include="Entities\Incident.cs" />
+    <Compile Include="Entities\Opportunity.cs" />
+    <Compile Include="OptionSets\IncidentType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

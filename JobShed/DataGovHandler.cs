@@ -1,20 +1,21 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.Net.Http;
 
 namespace Jobs
 {
     internal class DataGovHandler
     {
-        readonly string baseUrl = "https://data.gov.il/api/3/action/datastore_search?resource_id=";
+        readonly string baseUrl = "https://data.gov.il/api/3/action/datastore_search?resource_id=142afde2-6228-49f9-8a29-9b6c3a0cbe40";
         public DataGovHandler()
         {
 
 
         }
 
-        public Response GetData(string requestId, string query)
+        public Response GetData( string query)
         {
-            string url = $"{baseUrl}{requestId}&{query}";
+            string url = $"{baseUrl}&{query}";
             string host = "data.gov.il";
 
             using (HttpClient client = new HttpClient())

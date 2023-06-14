@@ -5,7 +5,7 @@
 //     Changes to this file may cause incorrect behavior and will be lost if
 //     the code is regenerated.
 // </auto-generated>
-// Created via this command line: "C:\Users\USER\AppData\Roaming\MscrmTools\XrmToolBox\Plugins\DLaB.EarlyBoundGenerator\crmsvcutil.exe" /url:"https://org14531328.api.crm4.dynamics.com" /namespace:"Nipendo.Common.Entities" /out:"C:\Users\USER\source\repos\LeasingApp\Common\Entities\CrmServiceContext.cs" /servicecontextname:"CrmServiceContext" /SuppressGeneratedCodeAttribute /codecustomization:"DLaB.CrmSvcUtilExtensions.Entity.CustomizeCodeDomService,DLaB.CrmSvcUtilExtensions" /codegenerationservice:"DLaB.CrmSvcUtilExtensions.Entity.CustomCodeGenerationService,DLaB.CrmSvcUtilExtensions" /codewriterfilter:"DLaB.CrmSvcUtilExtensions.Entity.CodeWriterFilterService,DLaB.CrmSvcUtilExtensions" /namingservice:"DLaB.CrmSvcUtilExtensions.NamingService,DLaB.CrmSvcUtilExtensions" /metadataproviderservice:"DLaB.CrmSvcUtilExtensions.Entity.MetadataProviderService,DLaB.CrmSvcUtilExtensions" /username:"DavidWaismann@DavidSecondFreeLancer.onmicrosoft.com" /password:"Xadfh421n" 
+// Created via this command line: "C:\Users\USER\AppData\Roaming\MscrmTools\XrmToolBox\Plugins\DLaB.EarlyBoundGenerator\crmsvcutil.exe" /url:"https://orgcb5b1c4f.api.crm4.dynamics.com" /namespace:"Nipendo.Common.Entities" /out:"C:\Users\USER\source\repos\LeasingApp\Common\Entities\CrmServiceContext.cs" /servicecontextname:"CrmServiceContext" /SuppressGeneratedCodeAttribute /codecustomization:"DLaB.CrmSvcUtilExtensions.Entity.CustomizeCodeDomService,DLaB.CrmSvcUtilExtensions" /codegenerationservice:"DLaB.CrmSvcUtilExtensions.Entity.CustomCodeGenerationService,DLaB.CrmSvcUtilExtensions" /codewriterfilter:"DLaB.CrmSvcUtilExtensions.Entity.CodeWriterFilterService,DLaB.CrmSvcUtilExtensions" /namingservice:"DLaB.CrmSvcUtilExtensions.NamingService,DLaB.CrmSvcUtilExtensions" /metadataproviderservice:"DLaB.CrmSvcUtilExtensions.Entity.MetadataProviderService,DLaB.CrmSvcUtilExtensions" /username:"DavidwFreelancer@DavidThirdF.onmicrosoft.com" /password:"Hrkw29n111beb" 
 //------------------------------------------------------------------------------
 
 [assembly: Microsoft.Xrm.Sdk.Client.ProxyTypesAssemblyAttribute()]
@@ -30,26 +30,98 @@ namespace Nipendo.Common.Entities
 		}
 		
 		/// <summary>
-		/// Gets a binding to the set of all <see cref="Nipendo.Common.Entities.new_Manufacturer"/> entities.
+		/// Gets a binding to the set of all <see cref="Nipendo.Common.Entities.Account"/> entities.
 		/// </summary>
-		public System.Linq.IQueryable<Nipendo.Common.Entities.new_Manufacturer> new_ManufacturerSet
+		public System.Linq.IQueryable<Nipendo.Common.Entities.Account> AccountSet
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.CreateQuery<Nipendo.Common.Entities.new_Manufacturer>();
+				return this.CreateQuery<Nipendo.Common.Entities.Account>();
 			}
 		}
 		
 		/// <summary>
-		/// Gets a binding to the set of all <see cref="Nipendo.Common.Entities.new_Model"/> entities.
+		/// Gets a binding to the set of all <see cref="Nipendo.Common.Entities.dvd_car"/> entities.
 		/// </summary>
-		public System.Linq.IQueryable<Nipendo.Common.Entities.new_Model> new_ModelSet
+		public System.Linq.IQueryable<Nipendo.Common.Entities.dvd_car> dvd_carSet
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.CreateQuery<Nipendo.Common.Entities.new_Model>();
+				return this.CreateQuery<Nipendo.Common.Entities.dvd_car>();
+			}
+		}
+		
+		/// <summary>
+		/// Gets a binding to the set of all <see cref="Nipendo.Common.Entities.dvd_cardriver"/> entities.
+		/// </summary>
+		public System.Linq.IQueryable<Nipendo.Common.Entities.dvd_cardriver> dvd_cardriverSet
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.CreateQuery<Nipendo.Common.Entities.dvd_cardriver>();
+			}
+		}
+		
+		/// <summary>
+		/// Gets a binding to the set of all <see cref="Nipendo.Common.Entities.dvd_countries"/> entities.
+		/// </summary>
+		public System.Linq.IQueryable<Nipendo.Common.Entities.dvd_countries> dvd_countriesSet
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.CreateQuery<Nipendo.Common.Entities.dvd_countries>();
+			}
+		}
+		
+		/// <summary>
+		/// Gets a binding to the set of all <see cref="Nipendo.Common.Entities.dvd_manu"/> entities.
+		/// </summary>
+		public System.Linq.IQueryable<Nipendo.Common.Entities.dvd_manu> dvd_manuSet
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.CreateQuery<Nipendo.Common.Entities.dvd_manu>();
+			}
+		}
+		
+		/// <summary>
+		/// Gets a binding to the set of all <see cref="Nipendo.Common.Entities.dvd_mod"/> entities.
+		/// </summary>
+		public System.Linq.IQueryable<Nipendo.Common.Entities.dvd_mod> dvd_modSet
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.CreateQuery<Nipendo.Common.Entities.dvd_mod>();
+			}
+		}
+		
+		/// <summary>
+		/// Gets a binding to the set of all <see cref="Nipendo.Common.Entities.Incident"/> entities.
+		/// </summary>
+		public System.Linq.IQueryable<Nipendo.Common.Entities.Incident> IncidentSet
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.CreateQuery<Nipendo.Common.Entities.Incident>();
+			}
+		}
+		
+		/// <summary>
+		/// Gets a binding to the set of all <see cref="Nipendo.Common.Entities.Opportunity"/> entities.
+		/// </summary>
+		public System.Linq.IQueryable<Nipendo.Common.Entities.Opportunity> OpportunitySet
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.CreateQuery<Nipendo.Common.Entities.Opportunity>();
 			}
 		}
 	}

@@ -23,8 +23,14 @@ saveappsetting</ActionsToSkip>
     <CreateOneFilePerOptionSet>false</CreateOneFilePerOptionSet>
     <DeleteFilesFromOutputFolders>false</DeleteFilesFromOutputFolders>
     <EntitiesToSkip />
-    <EntitiesWhitelist>new_manufacturer|
-new_model</EntitiesWhitelist>
+    <EntitiesWhitelist>account|
+dvd_car|
+dvd_cardriver|
+dvd_countries|
+dvd_manu|
+dvd_mod|
+incident|
+opportunity</EntitiesWhitelist>
     <EntityAttributeSpecifiedNames />
     <EntityPrefixesToSkip />
     <EntityPrefixesWhitelist />

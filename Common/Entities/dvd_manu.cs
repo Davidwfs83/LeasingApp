@@ -12,7 +12,7 @@ namespace Nipendo.Common.Entities
 {
 	
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum new_ManufacturerState
+	public enum dvd_manuState
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
@@ -26,8 +26,8 @@ namespace Nipendo.Common.Entities
 	/// 
 	/// </summary>
 	[System.Runtime.Serialization.DataContractAttribute()]
-	[Microsoft.Xrm.Sdk.Client.EntityLogicalNameAttribute("new_manufacturer")]
-	public partial class new_Manufacturer : Microsoft.Xrm.Sdk.Entity, System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	[Microsoft.Xrm.Sdk.Client.EntityLogicalNameAttribute("dvd_manu")]
+	public partial class dvd_manu : Microsoft.Xrm.Sdk.Entity, System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
 	{
 		
 		public static class Fields
@@ -35,13 +35,15 @@ namespace Nipendo.Common.Entities
 			public const string CreatedBy = "createdby";
 			public const string CreatedOn = "createdon";
 			public const string CreatedOnBehalfBy = "createdonbehalfby";
+			public const string dvd_manu_countries = "dvd_manu_countries";
+			public const string dvd_manucode = "dvd_manucode";
+			public const string dvd_manuId = "dvd_manuid";
+			public const string Id = "dvd_manuid";
+			public const string dvd_Name = "dvd_name";
 			public const string ImportSequenceNumber = "importsequencenumber";
 			public const string ModifiedBy = "modifiedby";
 			public const string ModifiedOn = "modifiedon";
 			public const string ModifiedOnBehalfBy = "modifiedonbehalfby";
-			public const string new_ManufacturerId = "new_manufacturerid";
-			public const string Id = "new_manufacturerid";
-			public const string new_Name = "new_name";
 			public const string OrganizationId = "organizationid";
 			public const string OverriddenCreatedOn = "overriddencreatedon";
 			public const string StateCode = "statecode";
@@ -49,28 +51,29 @@ namespace Nipendo.Common.Entities
 			public const string TimeZoneRuleVersionNumber = "timezoneruleversionnumber";
 			public const string UTCConversionTimeZoneCode = "utcconversiontimezonecode";
 			public const string VersionNumber = "versionnumber";
+			public const string dvd_dvd_manu_manu_countries_dvd_countries = "dvd_dvd_manu_manu_countries_dvd_countries";
 		}
 		
 		/// <summary>
 		/// Default Constructor.
 		/// </summary>
 		[System.Diagnostics.DebuggerNonUserCode()]
-		public new_Manufacturer() : 
+		public dvd_manu() : 
 				base(EntityLogicalName)
 		{
 		}
 		
-		public const string EntityLogicalName = "new_manufacturer";
+		public const string EntityLogicalName = "dvd_manu";
 		
-		public const string EntitySchemaName = "new_Manufacturer";
+		public const string EntitySchemaName = "dvd_manu";
 		
-		public const string PrimaryIdAttribute = "new_manufacturerid";
+		public const string PrimaryIdAttribute = "dvd_manuid";
 		
-		public const string PrimaryNameAttribute = "new_name";
+		public const string PrimaryNameAttribute = "dvd_name";
 		
-		public const string EntityLogicalCollectionName = "new_manufacturers";
+		public const string EntityLogicalCollectionName = "dvd_manus";
 		
-		public const string EntitySetName = "new_manufacturers";
+		public const string EntitySetName = "dvd_manus";
 		
 		public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
 		
@@ -95,7 +98,7 @@ namespace Nipendo.Common.Entities
 		}
 		
 		/// <summary>
-		/// Unique identifier of the user who created the record.
+		/// המזהה הייחודי של המשתמש שיצר את הרשומה.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdby")]
 		public Microsoft.Xrm.Sdk.EntityReference CreatedBy
@@ -108,7 +111,7 @@ namespace Nipendo.Common.Entities
 		}
 		
 		/// <summary>
-		/// Date and time when the record was created.
+		/// התאריך והשעה שבהם נוצרה הרשומה.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdon")]
 		public System.Nullable<System.DateTime> CreatedOn
@@ -121,7 +124,7 @@ namespace Nipendo.Common.Entities
 		}
 		
 		/// <summary>
-		/// Unique identifier of the delegate user who created the record.
+		/// המזהה הייחודי של המשתמש הנציג שיצר את הרשומה.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdonbehalfby")]
 		public Microsoft.Xrm.Sdk.EntityReference CreatedOnBehalfBy
@@ -141,7 +144,110 @@ namespace Nipendo.Common.Entities
 		}
 		
 		/// <summary>
-		/// Sequence number of the import that created this record.
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("dvd_manu_countries")]
+		public Microsoft.Xrm.Sdk.EntityReference dvd_manu_countries
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("dvd_manu_countries");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("dvd_manu_countries");
+				this.SetAttributeValue("dvd_manu_countries", value);
+				this.OnPropertyChanged("dvd_manu_countries");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("dvd_manucode")]
+		public string dvd_manucode
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("dvd_manucode");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("dvd_manucode");
+				this.SetAttributeValue("dvd_manucode", value);
+				this.OnPropertyChanged("dvd_manucode");
+			}
+		}
+		
+		/// <summary>
+		/// המזהה הייחודי של מופעי ישות
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("dvd_manuid")]
+		public System.Nullable<System.Guid> dvd_manuId
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("dvd_manuid");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("dvd_manuId");
+				this.SetAttributeValue("dvd_manuid", value);
+				if (value.HasValue)
+				{
+					base.Id = value.Value;
+				}
+				else
+				{
+					base.Id = System.Guid.Empty;
+				}
+				this.OnPropertyChanged("dvd_manuId");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("dvd_manuid")]
+		public override System.Guid Id
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return base.Id;
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.dvd_manuId = value;
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("dvd_name")]
+		public string dvd_Name
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("dvd_name");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("dvd_Name");
+				this.SetAttributeValue("dvd_name", value);
+				this.OnPropertyChanged("dvd_Name");
+			}
+		}
+		
+		/// <summary>
+		/// מספר הרצף של הייבוא שיצר את הרשומה.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("importsequencenumber")]
 		public System.Nullable<int> ImportSequenceNumber
@@ -161,7 +267,7 @@ namespace Nipendo.Common.Entities
 		}
 		
 		/// <summary>
-		/// Unique identifier of the user who modified the record.
+		/// המזהה הייחודי של המשתמש ששינה את הרשומה.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedby")]
 		public Microsoft.Xrm.Sdk.EntityReference ModifiedBy
@@ -174,7 +280,7 @@ namespace Nipendo.Common.Entities
 		}
 		
 		/// <summary>
-		/// Date and time when the record was modified.
+		/// התאריך והשעה שבהם הרשומה השתנתה.‬‬
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedon")]
 		public System.Nullable<System.DateTime> ModifiedOn
@@ -187,7 +293,7 @@ namespace Nipendo.Common.Entities
 		}
 		
 		/// <summary>
-		/// Unique identifier of the delegate user who modified the record.
+		/// המזהה הייחודי של המשתמש הנציג ששינה את הרשומה.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedonbehalfby")]
 		public Microsoft.Xrm.Sdk.EntityReference ModifiedOnBehalfBy
@@ -207,70 +313,7 @@ namespace Nipendo.Common.Entities
 		}
 		
 		/// <summary>
-		/// Unique identifier for entity instances
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("new_manufacturerid")]
-		public System.Nullable<System.Guid> new_ManufacturerId
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetAttributeValue<System.Nullable<System.Guid>>("new_manufacturerid");
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("new_ManufacturerId");
-				this.SetAttributeValue("new_manufacturerid", value);
-				if (value.HasValue)
-				{
-					base.Id = value.Value;
-				}
-				else
-				{
-					base.Id = System.Guid.Empty;
-				}
-				this.OnPropertyChanged("new_ManufacturerId");
-			}
-		}
-		
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("new_manufacturerid")]
-		public override System.Guid Id
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return base.Id;
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.new_ManufacturerId = value;
-			}
-		}
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("new_name")]
-		public string new_Name
-		{
-			[System.Diagnostics.DebuggerNonUserCode()]
-			get
-			{
-				return this.GetAttributeValue<string>("new_name");
-			}
-			[System.Diagnostics.DebuggerNonUserCode()]
-			set
-			{
-				this.OnPropertyChanging("new_Name");
-				this.SetAttributeValue("new_name", value);
-				this.OnPropertyChanged("new_Name");
-			}
-		}
-		
-		/// <summary>
-		/// Unique identifier for the organization
+		/// המזהה הייחודי של הארגון
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("organizationid")]
 		public Microsoft.Xrm.Sdk.EntityReference OrganizationId
@@ -283,7 +326,7 @@ namespace Nipendo.Common.Entities
 		}
 		
 		/// <summary>
-		/// Date and time that the record was migrated.
+		/// התאריך והשעה שבהם הועברה הרשומה.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("overriddencreatedon")]
 		public System.Nullable<System.DateTime> OverriddenCreatedOn
@@ -303,10 +346,10 @@ namespace Nipendo.Common.Entities
 		}
 		
 		/// <summary>
-		/// Status of the Manufacturer
+		/// מצב היצרן
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("statecode")]
-		public System.Nullable<Nipendo.Common.Entities.new_ManufacturerState> StateCode
+		public System.Nullable<Nipendo.Common.Entities.dvd_manuState> StateCode
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
@@ -314,7 +357,7 @@ namespace Nipendo.Common.Entities
 				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("statecode");
 				if ((optionSet != null))
 				{
-					return ((Nipendo.Common.Entities.new_ManufacturerState)(System.Enum.ToObject(typeof(Nipendo.Common.Entities.new_ManufacturerState), optionSet.Value)));
+					return ((Nipendo.Common.Entities.dvd_manuState)(System.Enum.ToObject(typeof(Nipendo.Common.Entities.dvd_manuState), optionSet.Value)));
 				}
 				else
 				{
@@ -338,7 +381,7 @@ namespace Nipendo.Common.Entities
 		}
 		
 		/// <summary>
-		/// Reason for the status of the Manufacturer
+		/// הסיבה למצב של היצרן
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("statuscode")]
 		public Microsoft.Xrm.Sdk.OptionSetValue StatusCode
@@ -358,7 +401,7 @@ namespace Nipendo.Common.Entities
 		}
 		
 		/// <summary>
-		/// For internal use only.
+		/// ‏‏לשימוש פנימי בלבד.‬
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("timezoneruleversionnumber")]
 		public System.Nullable<int> TimeZoneRuleVersionNumber
@@ -378,7 +421,7 @@ namespace Nipendo.Common.Entities
 		}
 		
 		/// <summary>
-		/// Time zone code that was in use when the record was created.
+		/// ‏‏קוד אזור הזמן שהיה בשימוש בעת יצירת הרשומה.‬
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("utcconversiontimezonecode")]
 		public System.Nullable<int> UTCConversionTimeZoneCode
@@ -398,7 +441,7 @@ namespace Nipendo.Common.Entities
 		}
 		
 		/// <summary>
-		/// Version Number
+		/// מספר גירסה
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("versionnumber")]
 		public System.Nullable<long> VersionNumber
@@ -411,11 +454,92 @@ namespace Nipendo.Common.Entities
 		}
 		
 		/// <summary>
+		/// 1:N dvd_dvd_car_car_manu_dvd_manu
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("dvd_dvd_car_car_manu_dvd_manu")]
+		public System.Collections.Generic.IEnumerable<Nipendo.Common.Entities.dvd_car> dvd_dvd_car_car_manu_dvd_manu
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntities<Nipendo.Common.Entities.dvd_car>("dvd_dvd_car_car_manu_dvd_manu", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("dvd_dvd_car_car_manu_dvd_manu");
+				this.SetRelatedEntities<Nipendo.Common.Entities.dvd_car>("dvd_dvd_car_car_manu_dvd_manu", null, value);
+				this.OnPropertyChanged("dvd_dvd_car_car_manu_dvd_manu");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N dvd_dvd_mod_mod_manu_dvd_manu
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("dvd_dvd_mod_mod_manu_dvd_manu")]
+		public System.Collections.Generic.IEnumerable<Nipendo.Common.Entities.dvd_mod> dvd_dvd_mod_mod_manu_dvd_manu
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntities<Nipendo.Common.Entities.dvd_mod>("dvd_dvd_mod_mod_manu_dvd_manu", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("dvd_dvd_mod_mod_manu_dvd_manu");
+				this.SetRelatedEntities<Nipendo.Common.Entities.dvd_mod>("dvd_dvd_mod_mod_manu_dvd_manu", null, value);
+				this.OnPropertyChanged("dvd_dvd_mod_mod_manu_dvd_manu");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N dvd_opportunity_oppor_manu_dvd_manu
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("dvd_opportunity_oppor_manu_dvd_manu")]
+		public System.Collections.Generic.IEnumerable<Nipendo.Common.Entities.Opportunity> dvd_opportunity_oppor_manu_dvd_manu
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntities<Nipendo.Common.Entities.Opportunity>("dvd_opportunity_oppor_manu_dvd_manu", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("dvd_opportunity_oppor_manu_dvd_manu");
+				this.SetRelatedEntities<Nipendo.Common.Entities.Opportunity>("dvd_opportunity_oppor_manu_dvd_manu", null, value);
+				this.OnPropertyChanged("dvd_opportunity_oppor_manu_dvd_manu");
+			}
+		}
+		
+		/// <summary>
+		/// N:1 dvd_dvd_manu_manu_countries_dvd_countries
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("dvd_manu_countries")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("dvd_dvd_manu_manu_countries_dvd_countries")]
+		public Nipendo.Common.Entities.dvd_countries dvd_dvd_manu_manu_countries_dvd_countries
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntity<Nipendo.Common.Entities.dvd_countries>("dvd_dvd_manu_manu_countries_dvd_countries", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("dvd_dvd_manu_manu_countries_dvd_countries");
+				this.SetRelatedEntity<Nipendo.Common.Entities.dvd_countries>("dvd_dvd_manu_manu_countries_dvd_countries", null, value);
+				this.OnPropertyChanged("dvd_dvd_manu_manu_countries_dvd_countries");
+			}
+		}
+		
+		/// <summary>
 		/// Constructor for populating via LINQ queries given a LINQ anonymous type
 		/// <param name="anonymousType">LINQ anonymous type.</param>
 		/// </summary>
 		[System.Diagnostics.DebuggerNonUserCode()]
-		public new_Manufacturer(object anonymousType) : 
+		public dvd_manu(object anonymousType) : 
 				this()
 		{
             foreach (var p in anonymousType.GetType().GetProperties())
@@ -433,9 +557,9 @@ namespace Nipendo.Common.Entities
                 {
                     case "id":
                         base.Id = (System.Guid)value;
-                        Attributes["new_manufacturerid"] = base.Id;
+                        Attributes["dvd_manuid"] = base.Id;
                         break;
-                    case "new_manufacturerid":
+                    case "dvd_manuid":
                         var id = (System.Nullable<System.Guid>) value;
                         if(id == null){ continue; }
                         base.Id = id.Value;
